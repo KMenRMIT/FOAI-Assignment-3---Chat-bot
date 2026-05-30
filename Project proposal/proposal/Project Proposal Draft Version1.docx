@@ -1,1 +1,243 @@
+# AI HealthGuide
+
+## A Generative AI Assistant for Patient-Friendly Medical Communication
+
+### Foundations of AI – Assignment 3
+
+Team Members:
+
+* Kulunu Hewasiliyan
+* [Partner Name]
+
+---
+
+# 1. Introduction
+
+Artificial Intelligence (AI) is increasingly transforming the healthcare industry by improving efficiency, accessibility, and communication. While healthcare professionals possess the expertise required to diagnose and treat patients, communication barriers often prevent patients from fully understanding medical advice, prescriptions, discharge instructions, and healthcare terminology. These misunderstandings may lead to medication errors, reduced treatment adherence, anxiety, and poorer health outcomes.
+
+This project proposes AI HealthGuide, a Generative AI-powered healthcare communication assistant designed to simplify complex medical information into patient-friendly language. The system aims to improve healthcare accessibility and health literacy while maintaining strong ethical, privacy, and safety safeguards.
+
+---
+
+# 2. Problem Definition
+
+Healthcare communication remains a significant challenge worldwide. Medical professionals often communicate using technical terminology that many patients struggle to understand. This issue is particularly common among:
+
+* Elderly patients
+* International students
+* Migrants and non-native English speakers
+* Individuals with low health literacy
+* Patients receiving complex treatment plans
+
+Research has shown that misunderstandings regarding prescriptions and treatment instructions can result in medication misuse, missed appointments, and unnecessary hospital readmissions.
+
+Current online healthcare information sources are often difficult to interpret and may not provide personalised explanations suited to an individual patient's needs.
+
+Therefore, there is a growing need for a system capable of translating complex healthcare information into simple, understandable language while maintaining accuracy and safety.
+
+---
+
+# 3. Target Users and Stakeholders
+
+## Primary Users
+
+* Patients
+* Elderly individuals
+* International students
+* Migrants
+* Individuals with limited health literacy
+
+## Secondary Stakeholders
+
+* Hospitals
+* Clinics
+* General Practitioners (GPs)
+* Pharmacists
+* Healthcare organisations
+
+## Intended Impact
+
+The proposed system aims to:
+
+* Improve patient understanding
+* Reduce confusion surrounding healthcare instructions
+* Support informed decision-making
+* Improve treatment adherence
+* Increase healthcare accessibility
+
+---
+
+# 4. Proposed AI Solution
+
+AI HealthGuide is a Generative AI healthcare chatbot designed to assist users in understanding medical information through simplified explanations.
+
+The chatbot will allow users to:
+
+* Enter prescriptions
+* Upload healthcare instructions
+* Ask questions regarding medical terminology
+* Receive simplified summaries
+* Generate follow-up questions for healthcare professionals
+
+Example:
+
+Input:
+"Take amoxicillin 500mg three times daily for seven days."
+
+Output:
+"Take one tablet in the morning, afternoon, and evening for seven days. Complete the full course unless your doctor advises otherwise."
+
+The system is designed to support communication rather than replace healthcare professionals.
+
+---
+
+# 5. Why Artificial Intelligence is Appropriate
+
+Artificial Intelligence is suitable for this problem because healthcare communication often involves large volumes of complex text that can be processed and simplified efficiently using modern language models.
+
+Generative AI technologies are capable of:
+
+* Understanding natural language
+* Simplifying technical terminology
+* Generating personalised explanations
+* Supporting multilingual communication
+* Providing consistent responses
+
+Unlike traditional static information pages, AI systems can dynamically adapt explanations to user needs and questions.
+
+---
+
+# 6. Market Need and Value Proposition
+
+Digital healthcare services have expanded significantly over recent years. Patients increasingly seek online assistance to better understand healthcare information and treatment plans.
+
+The proposed system offers several advantages:
+
+### Patient Benefits
+
+* Easier understanding of medical information
+* Reduced anxiety
+* Improved confidence in healthcare decisions
+
+### Healthcare Provider Benefits
+
+* Reduced time spent explaining basic information
+* Improved patient engagement
+* Better treatment adherence
+
+### Social Benefits
+
+* Improved healthcare accessibility
+* Support for multicultural communities
+* Increased health literacy
+
+---
+
+# 7. Preliminary Prototype Concept
+
+The initial prototype will be implemented as a website-based chatbot.
+
+Technologies:
+
+* HTML
+* CSS
+* JavaScript
+
+Prototype Features:
+
+* Chat interface
+* Medical explanation assistant
+* Prescription simplifier
+* Safety warning system
+* Emergency guidance
+* Multilingual support concept
+
+The prototype will initially use simulated chatbot responses to demonstrate user interaction and system functionality.
+
+Future versions may integrate a Large Language Model (LLM) with healthcare-specific safety controls.
+
+---
+
+# 8. Preliminary Data Strategy
+
+The future implementation of AI HealthGuide would require access to:
+
+* Public healthcare information
+* Medical education materials
+* Prescription guidance examples
+* Healthcare FAQ datasets
+* Multilingual healthcare resources
+
+Key considerations include:
+
+* Data quality
+* Data representativeness
+* Data privacy
+* Bias mitigation
+
+No patient data would be collected without informed consent.
+
+---
+
+# 9. Ethics, Safety, Privacy, and Security
+
+Healthcare AI systems must be developed responsibly due to their potential impact on human wellbeing.
+
+## Ethical Risks
+
+* Bias in generated responses
+* Exclusion of minority populations
+* Misinformation
+
+## Safety Risks
+
+* Incorrect healthcare guidance
+* Overreliance on AI
+* Misinterpretation of outputs
+
+## Privacy Risks
+
+* Exposure of sensitive health information
+* Data misuse
+
+## Security Risks
+
+* Unauthorised access
+* Prompt injection attacks
+* Data breaches
+
+### Mitigation Strategies
+
+* Human oversight
+* Clear safety warnings
+* Privacy-by-design principles
+* Data encryption
+* Regular auditing
+* Continuous monitoring
+* Inclusive testing across diverse user groups
+
+The chatbot will clearly communicate that it does not replace qualified healthcare professionals.
+
+---
+
+# 10. Future Development and Scalability
+
+Future versions of AI HealthGuide may include:
+
+* Large Language Model integration
+* Mobile application deployment
+* Voice-based interaction
+* Integration with healthcare providers
+* Personalised healthcare education
+* Multilingual support
+
+The system is designed to be scalable and adaptable to different healthcare environments and populations.
+
+---
+
+# 11. Conclusion
+
+AI HealthGuide proposes a responsible and practical application of Generative AI within healthcare communication. By simplifying complex medical information and improving accessibility, the system aims to support patients in making informed healthcare decisions while maintaining strong ethical, privacy, and safety standards.
+
+The project demonstrates how Generative AI can be used to address a genuine real-world problem while recognising the importance of responsible AI development and human oversight.
 
