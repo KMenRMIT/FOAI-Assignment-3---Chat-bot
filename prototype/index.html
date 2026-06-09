@@ -84,6 +84,18 @@
     }
     .nav-logo-text em { font-style: italic; color: var(--teal-700); }
 
+    .nav-links {
+      display: flex; align-items: center; gap: 4px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-500);
+      font-size: 14.5px; font-weight: 600;
+      padding: 7px 14px; border-radius: 50px;
+      transition: all .2s;
+    }
+    .nav-links a:hover { color: var(--teal-700); background: rgba(200, 234, 231, 0.5); }
+
     .btn-nav {
       background: var(--teal-700); color: white;
       border: none; border-radius: 50px;
@@ -670,7 +682,12 @@
       <div class="nav-logo-mark">⚕</div>
       <span class="nav-logo-text">AI <em>Health</em>Guide</span>
     </div>
-    <button class="btn-nav" onclick="showChat()">Start a Conversation →</button>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="safety.html">Safety &amp; Ethics</a>
+
+      <button class="btn-nav" onclick="showChat()">💬 Start chatting →</button>
+    </div>
   </nav>
 
   <!-- Hero -->
@@ -810,6 +827,10 @@
       <button class="back-btn" onclick="showLanding()">← Back</button>
       <span class="divider">|</span>
       <span class="topbar-title">AI <em>Health</em>Guide</span>
+      <div class="nav-links" style="margin-left: auto; margin-right: 14px;">
+        <a href="about.html">About</a>
+        <a href="safety.html">Safety &amp; Ethics</a>
+      </div>
       <div class="status-badge">
         <div class="status-dot"></div>
         Online
@@ -878,6 +899,9 @@
 
 
 <script>
+/* Auto-open chat if linked directly via #chat (script runs after body so DOM is ready) */
+if (window.location.hash === '#chat') { showChat(); }
+
 /* ── Navigation ─────────────────────────────── */
 function showChat() {
   document.getElementById('landing-page').classList.remove('active');
