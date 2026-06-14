@@ -156,27 +156,6 @@
       line-height: 1.75; max-width: 580px; margin: 0 auto;
     }
 
-    /* ── Big disclaimer ──────────────────────────────── */
-    .big-disclaimer {
-      background: var(--red-bg);
-      border-top: 4px solid #EF4444;
-      padding: 60px 48px;
-    }
-    .big-disclaimer-inner {
-      max-width: 1100px; margin: 0 auto;
-      display: flex; gap: 24px; align-items: flex-start;
-    }
-    .big-disclaimer-icon { font-size: 42px; flex-shrink: 0; margin-top: 4px; }
-    .big-disclaimer h2 {
-      font-family: 'Fraunces', serif; font-size: 28px; font-weight: 400;
-      color: #7F1D1D; margin-bottom: 14px;
-    }
-    .big-disclaimer p {
-      font-size: 16px; color: #991B1B; line-height: 1.75; margin-bottom: 12px;
-    }
-    .big-disclaimer p:last-child { margin-bottom: 0; }
-    .big-disclaimer strong { color: #7F1D1D; }
-
     /* ── Sections ────────────────────────────────────── */
     section { padding: 80px 48px; }
     .section-inner { max-width: 1100px; margin: 0 auto; }
@@ -199,35 +178,199 @@
       line-height: 1.75; max-width: 580px; margin-bottom: 48px;
     }
 
-    /* ── Ethics grid ─────────────────────────────────── */
-    .ethics-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+    /* ── Three pillars layout ────────────────────────── */
+    .pillars-wrap {
+      padding: 80px 48px;
+      background: var(--white);
     }
-    .e-card {
-      background: var(--bg); border: 1px solid var(--border);
-      border-radius: var(--r-lg); padding: 32px 28px;
-      transition: all .3s; position: relative; overflow: hidden;
+    .pillars-inner {
+      max-width: 1100px; margin: 0 auto;
     }
-    .e-card::after {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0; height: 3px;
-      background: linear-gradient(90deg, var(--teal-700), var(--teal-300));
-      transform: scaleX(0); transform-origin: left;
-      transition: transform .3s;
+    .pillars-header {
+      text-align: center; margin-bottom: 52px;
     }
-    .e-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); background: var(--white); border-color: var(--teal-100); }
-    .e-card:hover::after { transform: scaleX(1); }
-    .e-icon {
-      width: 52px; height: 52px; border-radius: var(--r-md);
-      background: var(--teal-50);
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    /* Risks card */
+    .pillar-risks {
+      background: var(--red-bg);
+      border: 1px solid var(--red-border);
+      border-radius: var(--r-lg);
+      padding: 36px 30px;
+    }
+    .pillar-risks-title {
+      font-family: 'Fraunces', serif;
+      font-size: 22px; font-weight: 400;
+      color: #7F1D1D; margin-bottom: 24px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #FECACA;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .pillar-risks ol {
+      list-style: none; padding: 0;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .pillar-risks li {
+      display: flex; gap: 12px; align-items: flex-start;
+      font-size: 15px; color: #991B1B; line-height: 1.5;
+    }
+    .risk-num {
+      width: 24px; height: 24px; border-radius: 50%;
+      background: #FECACA; color: #7F1D1D;
+      font-size: 12px; font-weight: 800;
       display: flex; align-items: center; justify-content: center;
-      font-size: 24px; margin-bottom: 20px;
+      flex-shrink: 0; margin-top: 1px;
     }
-    .e-card h3 {
-      font-family: 'Fraunces', serif; font-size: 20px; font-weight: 400;
-      color: var(--text-900); margin-bottom: 10px;
+
+    /* Centre thesis card */
+    .pillar-thesis {
+      background: linear-gradient(145deg, var(--teal-900), var(--teal-700));
+      border-radius: var(--r-lg);
+      padding: 36px 30px;
+      display: flex; flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      position: relative; overflow: hidden;
     }
-    .e-card p { font-size: 14.5px; color: var(--text-500); line-height: 1.7; }
+    .pillar-thesis::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    .pillar-thesis-icon {
+      font-size: 38px; margin-bottom: 20px; position: relative;
+    }
+    .pillar-thesis p {
+      font-family: 'Fraunces', serif;
+      font-size: 18px; font-weight: 400;
+      color: white; line-height: 1.7;
+      position: relative;
+    }
+    .pillar-thesis p em { color: var(--teal-300); font-style: italic; }
+
+    /* Safety measures card */
+    .pillar-safety {
+      background: var(--teal-50);
+      border: 1px solid var(--teal-100);
+      border-radius: var(--r-lg);
+      padding: 36px 30px;
+    }
+    .pillar-safety-title {
+      font-family: 'Fraunces', serif;
+      font-size: 22px; font-weight: 400;
+      color: var(--teal-900); margin-bottom: 24px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid var(--teal-100);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .pillar-safety ol {
+      list-style: none; padding: 0;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .pillar-safety li {
+      display: flex; gap: 12px; align-items: flex-start;
+      font-size: 15px; color: var(--teal-900); line-height: 1.5;
+    }
+    .safety-num {
+      width: 24px; height: 24px; border-radius: 50%;
+      background: var(--teal-100); color: var(--teal-900);
+      font-size: 12px; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 1px;
+    }
+
+    /* ── Example interaction ─────────────────────────── */
+    .example-section {
+      padding: 80px 48px;
+      background: var(--bg);
+    }
+    .example-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1.6fr; gap: 60px; align-items: center;
+    }
+    .example-text .section-label { margin-bottom: 14px; }
+    .example-text .section-h { margin-bottom: 16px; }
+    .example-text p {
+      font-size: 16px; color: var(--text-500); line-height: 1.8;
+    }
+
+    .chat-demo {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+    .chat-demo-header {
+      background: linear-gradient(135deg, var(--teal-900), var(--teal-700));
+      padding: 16px 22px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .chat-demo-avatar {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: rgba(255,255,255,.15);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+    }
+    .chat-demo-name {
+      font-family: 'Fraunces', serif; font-size: 17px; font-weight: 400;
+      color: white;
+    }
+    .chat-demo-status {
+      font-size: 12px; color: rgba(255,255,255,.55);
+    }
+    .chat-demo-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: #4ADE80; display: inline-block; margin-right: 5px;
+    }
+
+    .chat-demo-body {
+      padding: 24px 22px;
+      display: flex; flex-direction: column; gap: 18px;
+    }
+
+    .chat-bubble-wrap {
+      display: flex; flex-direction: column; gap: 4px;
+    }
+    .chat-bubble-wrap.user { align-items: flex-end; }
+    .chat-bubble-wrap.bot  { align-items: flex-start; }
+
+    .chat-label {
+      font-size: 11px; font-weight: 800; letter-spacing: .06em;
+      text-transform: uppercase; color: var(--text-300);
+      margin-bottom: 2px; padding: 0 4px;
+    }
+
+    .chat-bubble {
+      max-width: 88%;
+      padding: 14px 18px;
+      border-radius: 18px;
+      font-size: 15px; line-height: 1.65;
+    }
+    .chat-bubble.user {
+      background: var(--teal-700); color: white;
+      border-bottom-right-radius: 4px;
+    }
+    .chat-bubble.bot {
+      background: #FEF2F2;
+      border: 1px solid #FECACA;
+      color: #7F1D1D;
+      border-bottom-left-radius: 4px;
+    }
+    .chat-bubble.bot strong { color: #7F1D1D; }
+
+    .chat-emergency-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #EF4444; color: white;
+      border-radius: 50px; padding: 4px 12px;
+      font-size: 11.5px; font-weight: 800;
+      letter-spacing: .05em; margin-bottom: 8px;
+    }
 
     /* ── Emergency section ───────────────────────────── */
     .emergency-section {
@@ -276,33 +419,7 @@
     .emerg-contact-name { font-weight: 800; color: white; font-size: 15px; margin-bottom: 3px; }
     .emerg-contact-desc { font-size: 13px; color: rgba(255,255,255,.55); }
 
-    /* ── Privacy section ─────────────────────────────── */
-    .privacy-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
-    }
-    .privacy-card {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: var(--r-lg); padding: 30px;
-      transition: all .25s;
-    }
-    .privacy-card:hover { border-color: var(--teal-100); box-shadow: var(--shadow-md); }
-    .privacy-card-icon { font-size: 28px; margin-bottom: 16px; }
-    .privacy-card h3 {
-      font-family: 'Fraunces', serif; font-size: 20px; font-weight: 400;
-      color: var(--text-900); margin-bottom: 12px;
-    }
-    .privacy-card p { font-size: 15px; color: var(--text-500); line-height: 1.75; }
-    .privacy-tag {
-      display: inline-block; margin-top: 14px;
-      background: var(--teal-50); border: 1px solid var(--teal-100);
-      border-radius: 50px; padding: 3px 12px;
-      font-size: 12px; font-weight: 700; color: var(--teal-700);
-    }
-    .privacy-tag.amber {
-      background: var(--amber-bg); border-color: #F5D98B; color: #7C5217;
-    }
-
-    /* ── AI Principles ───────────────────────────────── */
+    /* ── AI Ethics Framework ─────────────────────────── */
     .principles-section {
       background: linear-gradient(140deg, var(--teal-900), var(--teal-700));
       padding: 80px 48px; position: relative; overflow: hidden;
@@ -310,7 +427,7 @@
     .principles-section::before {
       content: '';
       position: absolute; inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
     }
     .principles-inner {
       max-width: 1100px; margin: 0 auto; position: relative;
@@ -349,26 +466,6 @@
     .aus-framework p { font-size: 14.5px; color: rgba(255,255,255,.65); line-height: 1.7; }
     .aus-framework strong { color: rgba(255,255,255,.9); }
 
-    /* ── Limitations ─────────────────────────────────── */
-    .limitations-grid {
-      display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
-    }
-    .limit-item {
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: var(--r-lg); padding: 26px 28px;
-      display: flex; gap: 16px; align-items: flex-start;
-      transition: all .25s;
-    }
-    .limit-item:hover { border-color: var(--coral); box-shadow: var(--shadow-md); }
-    .limit-x {
-      width: 36px; height: 36px; border-radius: 50%;
-      background: var(--coral-bg); color: var(--coral);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 18px; flex-shrink: 0; font-weight: 800;
-    }
-    .limit-item h3 { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 400; color: var(--text-900); margin-bottom: 8px; }
-    .limit-item p { font-size: 14.5px; color: var(--text-500); line-height: 1.7; }
-
     /* ── Footer ──────────────────────────────────────── */
     footer {
       background: var(--text-900); padding: 44px 48px; text-align: center;
@@ -398,15 +495,12 @@
     @media (max-width: 960px) {
       .nav { padding: 0 24px; }
       .nav-links { display: none; }
-      section, .emergency-section, .principles-section { padding: 60px 24px; }
+      section, .emergency-section, .principles-section, .pillars-wrap, .example-section { padding: 60px 24px; }
       .hero { padding: 110px 24px 70px; }
-      .big-disclaimer { padding: 40px 24px; }
-      .big-disclaimer-inner { flex-direction: column; }
-      .ethics-grid { grid-template-columns: 1fr; }
+      .pillars-grid { grid-template-columns: 1fr; }
+      .example-inner { grid-template-columns: 1fr; gap: 36px; }
       .emergency-inner { grid-template-columns: 1fr; gap: 36px; }
-      .privacy-grid { grid-template-columns: 1fr; }
       .principles-grid { grid-template-columns: 1fr 1fr; }
-      .limitations-grid { grid-template-columns: 1fr; }
       footer { padding: 36px 24px; }
     }
     @media (max-width: 600px) {
@@ -427,7 +521,6 @@
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="safety.html" class="active">Safety &amp; Ethics</a>
-
     <a href="index.html#chat" class="btn-nav">💬 Start chatting →</a>
   </div>
 </nav>
@@ -442,67 +535,128 @@
   <div class="hero-inner">
     <div class="section-chip fi fi-1">Safety &amp; Ethics</div>
     <h1 class="hero-heading fi fi-2">
-      Safety, ethics,<br>and <em>responsible AI.</em>
+      Ethics &amp; trustworthiness<br>in <em>AI HealthGuide.</em>
     </h1>
     <p class="hero-sub fi fi-3">
-      AI HealthGuide is a support tool — not a doctor, not a pharmacist, and never a replacement for professional care. Here is exactly how we approach safety, privacy, and the ethical use of AI in healthcare.
+      Healthcare AI systems must be designed responsibly — because inaccurate information can have serious consequences. Here is how we approach the risks and the safeguards we put in place.
     </p>
   </div>
 </section>
 
-<!-- Big Disclaimer -->
-<div class="big-disclaimer">
-  <div class="big-disclaimer-inner">
-    <div class="big-disclaimer-icon">🚫</div>
-    <div>
-      <h2>Not a medical professional — ever.</h2>
-      <p>AI HealthGuide <strong>does not diagnose conditions, prescribe medication, or provide clinical advice.</strong> It simplifies and explains existing medical information — nothing more. Every response is AI-generated and may be incomplete, incorrect, or not applicable to your specific situation.</p>
-      <p>Always consult your <strong>GP, pharmacist, specialist, or other qualified healthcare professional</strong> before making any medical decision. If you are in a medical emergency, do not use this app — call <strong>000 immediately.</strong></p>
+<!-- Three Pillars: Risks | Thesis | Safety Measures -->
+<div class="pillars-wrap">
+  <div class="pillars-inner">
+    <div class="pillars-header">
+      <div class="section-label">Our framework</div>
+      <h2 class="section-h">Risks identified.<br><em>Safeguards built.</em></h2>
+    </div>
+
+    <div class="pillars-grid">
+
+      <!-- Potential Risks -->
+      <div class="pillar-risks">
+        <div class="pillar-risks-title">
+          ⚠️ Potential Risks
+        </div>
+        <ol>
+          <li>
+            <span class="risk-num">1</span>
+            Incorrect healthcare information
+          </li>
+          <li>
+            <span class="risk-num">2</span>
+            User overreliance on AI
+          </li>
+          <li>
+            <span class="risk-num">3</span>
+            Privacy and data security concerns
+          </li>
+          <li>
+            <span class="risk-num">4</span>
+            Bias in generated responses
+          </li>
+          <li>
+            <span class="risk-num">5</span>
+            Misinterpretation of medical advice
+          </li>
+        </ol>
+      </div>
+
+      <!-- Core Thesis -->
+      <div class="pillar-thesis">
+        <div class="pillar-thesis-icon">🏥</div>
+        <p>Healthcare AI systems must be designed <em>responsibly</em> because inaccurate information can have serious consequences. AI HealthGuide prioritizes user safety, transparency, and trustworthiness by ensuring that <em>healthcare professionals remain the primary source</em> of medical advice.</p>
+      </div>
+
+      <!-- Safety Measures -->
+      <div class="pillar-safety">
+        <div class="pillar-safety-title">
+          🛡️ Safety Measures
+        </div>
+        <ol>
+          <li>
+            <span class="safety-num">1</span>
+            No diagnosis provided
+          </li>
+          <li>
+            <span class="safety-num">2</span>
+            No prescription recommendations
+          </li>
+          <li>
+            <span class="safety-num">3</span>
+            Emergency escalation guidance
+          </li>
+          <li>
+            <span class="safety-num">4</span>
+            Human oversight encouraged
+          </li>
+          <li>
+            <span class="safety-num">5</span>
+            Safety warnings included &amp; clear system limitations displayed
+          </li>
+        </ol>
+      </div>
+
     </div>
   </div>
 </div>
 
-<!-- Ethics principles -->
-<section>
-  <div class="section-inner">
-    <div class="section-label">Our principles</div>
-    <h2 class="section-h">Six commitments to<br><em>responsible design</em></h2>
-    <p class="section-sub">These principles guided every decision in building AI HealthGuide — from what it says, to what it refuses to do.</p>
+<!-- Example Interaction -->
+<div class="example-section">
+  <div class="example-inner">
+    <div class="example-text">
+      <div class="section-label">In practice</div>
+      <h2 class="section-h">Safety measures<br><em>in action</em></h2>
+      <p>When a user message suggests a potential medical emergency, AI HealthGuide does not attempt to advise, triage, or reassure. It immediately stops and directs the user to seek emergency care — because no chatbot response is worth a delayed call to 000.</p>
+    </div>
 
-    <div class="ethics-grid">
-      <div class="e-card">
-        <div class="e-icon">🚫</div>
-        <h3>No Diagnosis</h3>
-        <p>HealthGuide never attempts to diagnose a medical condition. It explains what terms and conditions mean — it does not determine whether a user has one. Clinical diagnosis requires a qualified professional.</p>
+    <div class="chat-demo">
+      <div class="chat-demo-header">
+        <div class="chat-demo-avatar">⚕</div>
+        <div>
+          <div class="chat-demo-name">AI HealthGuide</div>
+          <div class="chat-demo-status"><span class="chat-demo-dot"></span>Active</div>
+        </div>
       </div>
-      <div class="e-card">
-        <div class="e-icon">🔒</div>
-        <h3>Privacy Protection</h3>
-        <p>A real deployment would use data minimisation, explicit user consent, encrypted storage, and strict access controls. In this prototype, no user data is stored, logged, or transmitted anywhere.</p>
-      </div>
-      <div class="e-card">
-        <div class="e-icon">⚖️</div>
-        <h3>Bias Mitigation</h3>
-        <p>Healthcare AI must work equitably for everyone. A production system would require testing across age groups, cultural backgrounds, language levels, and medical literacy to identify and address bias.</p>
-      </div>
-      <div class="e-card">
-        <div class="e-icon">👩‍⚕️</div>
-        <h3>Human Oversight</h3>
-        <p>AI should not operate unsupervised in healthcare. Critical information should be reviewed by healthcare professionals, and users should always have access to escalate to a human when needed.</p>
-      </div>
-      <div class="e-card">
-        <div class="e-icon">🚨</div>
-        <h3>Emergency Redirection</h3>
-        <p>Detecting potential emergencies and directing users to call 000 is the single most important safety feature of this system. When in doubt, the response is always: call emergency services first.</p>
-      </div>
-      <div class="e-card">
-        <div class="e-icon">💬</div>
-        <h3>Transparency</h3>
-        <p>Users are always clearly informed they are speaking with an AI, not a healthcare professional. Responses are honest about uncertainty, and limitations are communicated openly — never hidden.</p>
+      <div class="chat-demo-body">
+
+        <div class="chat-bubble-wrap user">
+          <div class="chat-label">User</div>
+          <div class="chat-bubble user">I have severe chest pain.</div>
+        </div>
+
+        <div class="chat-bubble-wrap bot">
+          <div class="chat-label">AI HealthGuide</div>
+          <div class="chat-bubble bot">
+            <div class="chat-emergency-badge">🚨 Emergency detected</div>
+            <div>Chest pain may indicate a medical emergency. <strong>Please seek immediate medical attention or contact emergency services.</strong><br><br>Call <strong>000</strong> now if you are in Australia.</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-</section>
+</div>
 
 <!-- Emergency section -->
 <div class="emergency-section">
@@ -558,43 +712,7 @@
   </div>
 </div>
 
-<!-- Privacy & Data -->
-<section class="alt-bg">
-  <div class="section-inner">
-    <div class="section-label">Privacy &amp; data</div>
-    <h2 class="section-h">What we do — and don't —<br><em>do with your data</em></h2>
-    <p class="section-sub">Healthcare information is among the most sensitive data that exists. We take that seriously.</p>
-
-    <div class="privacy-grid">
-      <div class="privacy-card">
-        <div class="privacy-card-icon">🧹</div>
-        <h3>No data stored</h3>
-        <p>This prototype stores nothing. Conversations exist only in your browser session and disappear when you close the tab. No messages are logged, saved, or transmitted to any server.</p>
-        <span class="privacy-tag">Prototype behaviour</span>
-      </div>
-      <div class="privacy-card">
-        <div class="privacy-card-icon">🚫</div>
-        <h3>No personal data collected</h3>
-        <p>We do not collect names, email addresses, health identifiers, or any personally identifiable information. There are no accounts, no profiles, and no tracking cookies.</p>
-        <span class="privacy-tag">Current prototype</span>
-      </div>
-      <div class="privacy-card">
-        <div class="privacy-card-icon">🔐</div>
-        <h3>Real system requirements</h3>
-        <p>A production deployment would require explicit informed consent, a published privacy policy, encrypted data at rest and in transit, data minimisation practices, and compliance with the Australian Privacy Act 1988.</p>
-        <span class="privacy-tag amber">For production use</span>
-      </div>
-      <div class="privacy-card">
-        <div class="privacy-card-icon">📋</div>
-        <h3>Sensitive health data</h3>
-        <p>Under Australian law, health information is classified as sensitive data with additional protections. Any real healthcare AI system must comply with the My Health Records Act 2012 and relevant clinical data regulations.</p>
-        <span class="privacy-tag amber">For production use</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- AI Principles -->
+<!-- Australian AI Ethics Framework -->
 <div class="principles-section">
   <div class="principles-inner">
     <div class="section-chip">Australian AI Ethics Framework</div>
@@ -651,67 +769,12 @@
   </div>
 </div>
 
-<!-- Limitations -->
-<section>
-  <div class="section-inner">
-    <div class="section-label">Honest limitations</div>
-    <h2 class="section-h">What HealthGuide<br><em>cannot</em> do</h2>
-    <p class="section-sub">Being clear about limitations is as important as celebrating capabilities. Here is what this prototype does not — and should not — do.</p>
-
-    <div class="limitations-grid">
-      <div class="limit-item">
-        <div class="limit-x">✗</div>
-        <div>
-          <h3>Not real AI</h3>
-          <p>This prototype uses a rule-based pattern matching system, not a trained machine learning model. Responses are pre-written and triggered by keywords — it is not truly understanding your question.</p>
-        </div>
-      </div>
-      <div class="limit-item">
-        <div class="limit-x">✗</div>
-        <div>
-          <h3>Not clinically validated</h3>
-          <p>No healthcare professional has reviewed, validated, or endorsed the content of this chatbot. Explanations are simplified for general understanding and may not reflect the most current clinical guidance.</p>
-        </div>
-      </div>
-      <div class="limit-item">
-        <div class="limit-x">✗</div>
-        <div>
-          <h3>Not for real medical use</h3>
-          <p>This is a university assignment prototype built to demonstrate concepts. It is not a regulated medical device, not approved by the TGA, and must not be used to make real healthcare decisions.</p>
-        </div>
-      </div>
-      <div class="limit-item">
-        <div class="limit-x">✗</div>
-        <div>
-          <h3>Limited knowledge</h3>
-          <p>HealthGuide only responds to a small set of medications, conditions, and topics it was explicitly programmed with. It will not have useful answers for the vast majority of real medical questions.</p>
-        </div>
-      </div>
-      <div class="limit-item">
-        <div class="limit-x">✗</div>
-        <div>
-          <h3>Cannot interpret context</h3>
-          <p>The chatbot cannot consider your full medical history, current medications, allergies, or personal circumstances. Generic explanations may be misleading when applied to a specific situation.</p>
-        </div>
-      </div>
-      <div class="limit-item">
-        <div class="limit-x">✗</div>
-        <div>
-          <h3>Not a substitute for human care</h3>
-          <p>Empathy, clinical judgement, physical examination, and personal knowledge of a patient are things no current AI can replicate. HealthGuide is designed to complement care — never to replace it.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- Footer -->
 <footer>
   <div class="footer-links">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="safety.html">Safety &amp; Ethics</a>
-
   </div>
   <div class="footer-logo">AI <em>Health</em>Guide</div>
   <p class="footer-p">
